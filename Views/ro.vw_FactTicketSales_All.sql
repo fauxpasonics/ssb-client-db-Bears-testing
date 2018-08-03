@@ -1,0 +1,12 @@
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_NULLS ON
+GO
+
+
+CREATE VIEW [ro].[vw_FactTicketSales_All]
+AS
+SELECT * FROM dbo.FactTicketSales (NOLOCK)
+UNION
+SELECT * FROM dbo.FactTicketSalesHistory (NOLOCK)
+GO
